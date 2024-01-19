@@ -1,5 +1,7 @@
 # MacOS 산업기능요원 D-Day 카운터 (w/ SwiftBar)
 
+![image]()
+
 ## Before using this script
 0. 스크립트(플러그인) 다운로드
   - [Download Here](https://github.com/Gijuno/ITP-TimeTravel-macos/releases/) or Clone Repository
