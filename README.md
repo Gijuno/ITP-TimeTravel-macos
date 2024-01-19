@@ -2,9 +2,7 @@
 
 ## Before using this script
 0. 스크립트(플러그인) 다운로드
-  - [Download Here](https://github.com/Gijuno/ITP-TimeTravel-macos/releases/)
-  - or
-  - Clone Repository
+  - [Download Here](https://github.com/Gijuno/ITP-TimeTravel-macos/releases/) or Clone Repository
 1. SwiftBar 설치
   - `brew install swiftbar`
   - 플러그인 폴더 지정
