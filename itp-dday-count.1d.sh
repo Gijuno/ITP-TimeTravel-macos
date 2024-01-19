@@ -1,3 +1,15 @@
+# <xbar.title>산업기능요원 D-Day 카운터</xbar.title>
+# <xbar.version>v1.0.2</xbar.version>
+# <xbar.author>Gijuno</xbar.author>
+# <xbar.author.github>gijuno</xbar.author.github>
+# <xbar.desc>심플한 산업기능요원 D-Day 카운터</xbar.desc>
+# <swiftbar.hideAbout>true</swiftbar.hideAbout>
+# <swiftbar.hideRunInTerminal>true</swiftbar.hideRunInTerminal>
+# <swiftbar.hideLastUpdated>true</swiftbar.hideLastUpdated>
+# <swiftbar.hideDisablePlugin>true</swiftbar.hideDisablePlugin>
+# <swiftbar.hideSwiftBar>true</swiftbar.hideSwiftBar>
+# <swiftbar.refreshOnOpen>true</swiftbar.refreshOnOpen>
+
 ########################################
 # 'StartDate' 변수에 복무 시작일 작성
 # 'Type' 변수에 복무 종류 번호로 작성
