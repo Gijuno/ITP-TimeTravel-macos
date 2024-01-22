@@ -13,7 +13,7 @@
 ########################################
 # 'StartDate' 변수에 복무 시작일 작성
 # 'Type' 변수에 복무 종류 번호로 작성
-# 1: 사회복무요원(현역), 2: 사회복무요원(예비역)
+# 1: 산업기능요원(현역), 2: 산업기능요원(예비역)
 ########################################
 
 # CHANGE HERE 
@@ -26,11 +26,11 @@ Type=1
 case $Type in
   1) 
     EndDate=$(date -j -v +34m -v -1d -f "%Y-%m-%d" "$StartDate" +%Y-%m-%d 2>/dev/null)
-    TextType="사회복무요원(현역)"
+    TextType="산업기능요원(현역)"
     ;;
   2) 
     EndDate=$(date -j -v +23m -v -1d -f "%Y-%m-%d" "$StartDate" +%Y-%m-%d 2>/dev/null)
-    TextType="사회복무요원(예비역)"
+    TextType="산업기능요원(예비역)"
     ;;
   *) 
     echo "Error: Invalid Type value. It should be either 1 or 2."
