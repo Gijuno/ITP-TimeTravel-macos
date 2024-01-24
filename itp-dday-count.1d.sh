@@ -69,6 +69,19 @@ if [ $DaysDiff -lt 0 ]; then
   DaysDiff=$((DaysDiff + DaysInPrevMonth))
 fi
 
+ProgressDays=$((TotalDays - Dday))
+ProgressPercent=$(awk -v progress="$ProgressDays" -v total="$TotalDays" 'BEGIN { printf "%.2f", (progress/total)*100 }')
+
+GraphBarCount=$(echo "scale=0; $ProgressPercent / 2" | bc)
+
+GraphBar="["
+if [ "$GraphBarCount" -gt 0 ]; then
+  for i in $(seq 1 $GraphBarCount); do GraphBar="${GraphBar}l"; done
+fi
+if [ "$GraphBarCount" -lt 50 ]; then
+  for i in $(seq 1 $((50-GraphBarCount))); do GraphBar="${GraphBar}."; done
+fi
+GraphBar="${GraphBar}]"
 
 echo "🪖 D-$Dday"
 echo "---"
@@ -76,3 +89,4 @@ echo "🪖 $TextType"
 echo "📅 $StartDate ~ $EndDate"
 echo "🏠 전체복무일: $TotalDays 일"
 echo "$YearsDiff년 $MonthsDiff개월 $DaysDiff일 남았습니다"
+echo "$GraphBar $ProgressPercent%"
