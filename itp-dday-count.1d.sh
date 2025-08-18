@@ -48,7 +48,7 @@ YearsDiff=$((EndDateYear - CurrentYear))
 
 EndDateMonth=$(date -j -f "%Y-%m-%d" "$EndDate" +%m)
 CurrentMonth=$(date +%m)
-MonthsDiff=$((EndDateMonth - CurrentMonth))
+MonthsDiff=$((10#$EndDateMonth - 10#$CurrentMonth))
 if [ $MonthsDiff -lt 0 ]; then
   YearsDiff=$((YearsDiff - 1))
   MonthsDiff=$((12 + MonthsDiff))
@@ -56,7 +56,7 @@ fi
 
 EndDateDay=$(date -j -f "%Y-%m-%d" "$EndDate" +%d)
 CurrentDay=$(date +%d)
-DaysDiff=$((EndDateDay - CurrentDay))
+DaysDiff=$((10#$EndDateDay - 10#$CurrentDay))
 
 if [ $DaysDiff -lt 0 ]; then
   if [ $MonthsDiff -eq 0 ]; then
